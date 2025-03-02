@@ -512,13 +512,12 @@ function App() {
             )}
             
             <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true" 
-              className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+              action="https://formsubmit.co/usama.saleem@genaxai.com" 
+              method="POST"
+              className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
             >
-              {/* Netlify Hidden Input for Form Handling */}
-              <input type="hidden" name="form-name" value="contact" />
+              {/* Prevent spam bots */}
+              <input type="hidden" name="_captcha" value="false" />
             
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="group">
