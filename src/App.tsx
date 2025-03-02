@@ -512,81 +512,81 @@ function App() {
             )}
             
             <form 
-                name="netlify" 
-                method="POST" 
-                data-netlify="true" 
-                onSubmit={handleSubmit} 
-                className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
-              >
-                {/* Netlify Hidden Input for Form Handling */}
-                <input type="hidden" name="form-name" value="contact" />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="group">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="group">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">Email *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-6 group">
-                  <label htmlFor="business" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">Business Name</label>
+              name="contact" 
+              method="POST" 
+              data-netlify="true" 
+              className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl transform transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+            >
+              {/* Netlify Hidden Input for Form Handling */}
+              <input type="hidden" name="form-name" value="contact" />
+            
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="group">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">
+                    Name *
+                  </label>
                   <input
                     type="text"
-                    id="business"
-                    name="business"
-                    value={formData.business}
-                    onChange={handleInputChange}
+                    id="name"
+                    name="name"
+                    required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
-                    placeholder="Your company"
+                    placeholder="Your name"
                   />
                 </div>
-
-                <div className="mb-8 group">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={5}
+            
+                <div className="group">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
-                    placeholder="Tell me about your AI needs or challenges"
-                  ></textarea>
+                    placeholder="your.email@example.com"
+                  />
                 </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-bold text-lg transition-all hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden group"
-                >
-                  <span className="relative z-10">Get in Touch</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </button>
-
-                <p className="text-center text-gray-500 text-sm mt-4">
-                  Your information is secure and will never be shared with third parties.
-                </p>
+              </div>
+            
+              <div className="mb-6 group">
+                <label htmlFor="business" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">
+                  Business Name
+                </label>
+                <input
+                  type="text"
+                  id="business"
+                  name="business"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
+                  placeholder="Your company"
+                />
+              </div>
+            
+              <div className="mb-8 group">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-blue-400 transition-colors">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white transition-all"
+                  placeholder="Tell me about your AI needs or challenges"
+                ></textarea>
+              </div>
+            
+              <button
+                type="submit"
+                className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-bold text-lg transition-all hover:shadow-lg hover:shadow-blue-500/30 relative overflow-hidden group"
+              >
+                <span className="relative z-10">Get in Touch</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </button>
+            
+              <p className="text-center text-gray-500 text-sm mt-4">
+                Your information is secure and will never be shared with third parties.
+              </p>
             </form>
           </div>
           
