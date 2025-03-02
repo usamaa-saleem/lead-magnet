@@ -512,7 +512,7 @@ function App() {
             )}
             
             <form 
-                name="contact" 
+                name="netlify" 
                 method="POST" 
                 data-netlify="true" 
                 onSubmit={handleSubmit} 
